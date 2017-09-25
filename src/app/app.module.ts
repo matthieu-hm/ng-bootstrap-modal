@@ -2,10 +2,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
+import { BootstrapModalComponent } from './components/bootstrap-modal/bootstrap-modal.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    BootstrapModalComponent
   ],
   imports: [
     BrowserModule

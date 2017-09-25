@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { BootstrapModalComponent } from './components/bootstrap-modal/bootstrap-modal.component';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,20 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'app';
+  modalOptions = {};
+  @ViewChild(BootstrapModalComponent) bootstrapModalComponent: BootstrapModalComponent;
+
+  constructor() {}
+
+  toggleModal() {
+    this.bootstrapModalComponent.toggleModal();
+  }
+
+  showModal() {
+    this.bootstrapModalComponent.showModal();
+  }
+
+  hideModal() {
+    this.bootstrapModalComponent.hideModal();
+  }
 }
